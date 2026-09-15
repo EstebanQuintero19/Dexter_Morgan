@@ -5,7 +5,6 @@ import './Hero.css'
 export default function Hero() {
   const hall = useRef(null)
 
-  // the figure at the end of the hallway comes a little closer as you scroll away from it
   useEffect(() => {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
     let raf = 0

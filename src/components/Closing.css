@@ -5,7 +5,6 @@
 #close::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--ink), rgba(7,5,5,.3) 40%, rgba(7,5,5,.6)) }
 #close p { font-family: var(--display); font-size: clamp(2rem, 6vw, 4.5rem); line-height: 1; max-width: none; margin: 0 }
 #close small { display: block; margin: 1.5rem auto 0; color: var(--ash); font-size: .85rem; max-width: 40em }
-/* the last stretch of the page: scroll past the words and the room goes dark */
 #close .end { position: absolute; left: 0; right: 0; bottom: 0; height: 30vh; pointer-events: none }
 #close .black { position: fixed; inset: 0; z-index: 60; background: var(--ink); opacity: 0; pointer-events: none; transition: opacity 2.4s ease-in }
 body.end #close .black { opacity: 1 }

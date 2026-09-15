@@ -17,7 +17,6 @@
   font-family: var(--display); font-size: 1.25rem; color: var(--dried);
 }
 #code li .aside { color: #5a5048 }
-/* the red line is drawn across the rule when the sheet scrolls into view; text greys out after it */
 #code li.broken s {
   text-decoration: none; color: var(--ink);
   background: linear-gradient(var(--blood), var(--blood)) no-repeat 0 56% / 0% 2px;

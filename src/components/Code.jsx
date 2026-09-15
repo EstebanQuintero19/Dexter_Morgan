@@ -6,7 +6,6 @@ export default function Code() {
   const list = useRef(null)
   const [seen, setSeen] = useState(false)
 
-  // the broken rule gets crossed out in front of you, once, when the sheet comes into view
   useEffect(() => {
     const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setSeen(true); io.disconnect() } }, { threshold: .6 })
     io.observe(list.current)

@@ -14,7 +14,6 @@
 #cost .body b { display: block; font-family: var(--display); font-weight: 400; font-size: 2.4rem; line-height: 1; color: var(--bone); margin-bottom: .8rem }
 #cost .body p { font-size: .9rem; color: var(--bone); margin: 0 0 .8rem }
 #cost .body q { quotes: "“" "”"; color: var(--ash); display: block; font-size: .85rem }
-/* the plastic: milky, blurred, the same wrinkle highlights as the entrance */
 #cost .sheet {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:

@@ -2,7 +2,7 @@
 #hero .hall {
   position: absolute; inset: 0; z-index: -1;
   background-position: center; background-size: cover; background-repeat: no-repeat;
-  transform-origin: 50% 46%; /* the figure */
+  transform-origin: 50% 46%;
   transform: scale(calc(1 + var(--walk, 0) * .14));
   will-change: transform;
 }
@@ -16,7 +16,6 @@
   text-shadow: 0 0 40px rgba(180,13,22,.3);
   animation: beat 4.6s ease-in-out infinite;
 }
-/* lub-dub, then rest — barely there */
 @keyframes beat {
   0%, 30%, 100% { text-shadow: 0 0 40px rgba(180,13,22,.3) }
   7%  { text-shadow: 0 0 44px rgba(190,16,26,.42) }

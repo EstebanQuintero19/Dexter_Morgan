@@ -22,7 +22,6 @@ export default function Cost() {
             <p className="big">"I destroy everyone I love."</p>
           </div>
         </div>
-        {/* four bodies under plastic; the sheet clears when you touch it */}
         <ul className="bags">
           {LOSSES.map(([name, text, quote]) => (
             <li key={name} tabIndex={0}>

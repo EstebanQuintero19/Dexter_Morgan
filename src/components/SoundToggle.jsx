@@ -2,7 +2,6 @@ import { useImperativeHandle, useRef, useState, forwardRef } from 'react'
 import { THEME } from '../data/assets.js'
 import './SoundToggle.css'
 
-// Blood Theme at half volume. `ref.current.start()` lets the entrance kick it off from a user gesture.
 const SoundToggle = forwardRef(function SoundToggle(_, ref) {
   const audio = useRef(null)
   const [on, setOn] = useState(false)

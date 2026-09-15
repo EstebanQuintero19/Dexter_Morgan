@@ -2,7 +2,6 @@
 #passenger .frame { position: relative; min-height: 80vh; display: grid; place-items: center }
 #passenger figure { margin: 0; width: min(50vw, 300px); position: relative; z-index: 1 }
 #passenger figure img { filter: contrast(1.15) }
-/* the quotes live in the 33% on either side of the figure and always paint above it */
 #passenger blockquote {
   margin: 0; position: absolute; z-index: 2; font-family: var(--display);
   font-size: clamp(1.5rem, 3.6vw, 3rem); line-height: 1; max-width: 33%; color: var(--bone);

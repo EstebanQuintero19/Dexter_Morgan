@@ -1,4 +1,3 @@
-// SVG filters and gradients shared by every blood effect on the page.
 export default function BloodDefs() {
   return (
     <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">

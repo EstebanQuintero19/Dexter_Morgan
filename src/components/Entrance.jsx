@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import { KNIFE } from '../data/assets.js'
 import './Entrance.css'
 
-// The plastic sheet. Drag across the screen to cut it; the two halves peel apart along the cut.
 export default function Entrance({ onOpen }) {
   const ref = useRef(null)
   const pts = useRef([])

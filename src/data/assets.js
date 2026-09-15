@@ -3,6 +3,8 @@ const A = 'dexter_assets/'
 export const IMG = {
   hallway: A + 'Dark hallway Dexter phone wallpaper.jpeg',
   table: A + 'descarga (1).jpeg',
+  window: A + 'Dexter Morgan across the window.jpeg',
+  wall: A + 'Dexter premiere viewing party guest list posted in the _kill room_ (or dining room).jpeg',
   halftone: A + 'descarga (2).jpeg',
   day: A + 'dexter (2).jpeg',
   night: A + 'Dexter Morgan — Fractured Mind.jpeg',
@@ -18,8 +20,8 @@ export const IMG = {
 export const THEME = A + '24 Blood Theme.mp3'
 
 export const SPLAT = A + 'killers/icon_blood.png'
-export const KNIFE = A + 'knife_cursor_64.png'      // entrance cursor, tip at (1,2)
-export const KNIFE_SMALL = A + 'knife_cursor_32.png' // page cursor, tip at (1,1)
+export const KNIFE = A + 'knife_cursor_64.png'
+export const KNIFE_SMALL = A + 'knife_cursor_32.png'
 
 const KILLER_FILES = {
   1: 'Brian_Mouser.jpeg',

@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { IMG } from '../data/assets.js'
 import './Closing.css'
 
-// The last section. Reaching its end fades everything to black except the music button.
 export default function Closing() {
   const end = useRef(null)
   useEffect(() => {

@@ -14,14 +14,15 @@ const PINNED = [1, 4, 6, 8].map(s => KILLERS.find(k => k.s === s))
 
 export default function Room() {
   return (
-    <section id="room" style={{ backgroundImage: `url("${IMG.table}")` }}>
+    <section id="room" style={{ backgroundImage: `url("${IMG.window}")` }}>
       <div className="frame">
         <div>
           <h2>The room</h2>
           <p className="sub">The place changes. The order never does.</p>
           <div className="steps">
             {STEPS.map(([title, text, extra], i) => (
-              <div className={'note' + (extra ? ' ' + extra : '')} key={title} style={{ '--tilt': `${(i % 2 ? 1 : -1) * (1 + (i % 3) * .6)}deg` }}>
+              <div className={'note' + (extra ? ' ' + extra : '')} key={title}
+                   style={{ '--tilt': `${(i % 2 ? 1 : -1) * (1 + (i % 3) * .6)}deg`, ...(extra === 'pinned' ? { backgroundImage: `url("${IMG.wall}")` } : {}) }}>
                 <b>{title}</b>
                 {text}
                 {extra === 'pinned' && (
@@ -36,6 +37,10 @@ export default function Room() {
           </div>
         </div>
         <div className="evidence">
+          <figure className="photo wide">
+            <img src={IMG.table} alt="The table, wrapped in plastic, under two work lights" />
+            <figcaption>Exhibit 01 — the table</figcaption>
+          </figure>
           <figure className="photo">
             <img src={IMG.gloves} alt="Dexter in apron and latex gloves, adjusting a sleeve, knife in hand" />
             <figcaption>Exhibit 04 — gloves, apron</figcaption>

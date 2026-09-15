@@ -18,14 +18,12 @@ export default function App() {
   const [active, setActive] = useState(null)
   const sound = useRef(null)
 
-  // the splatter used as the blood on every slide; the knife as the cursor everywhere
   useEffect(() => {
     const root = document.documentElement.style
     root.setProperty('--splat', `url("${SPLAT}")`)
     root.setProperty('--knife', `url("${KNIFE_SMALL}") 1 1, auto`)
   }, [])
 
-  // light up the nav slide for whichever section is in the middle of the viewport
   useEffect(() => {
     const io = new IntersectionObserver(
       entries => entries.forEach(e => e.isIntersecting && setActive(e.target.id)),
