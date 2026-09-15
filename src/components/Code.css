@@ -17,8 +17,19 @@
   font-family: var(--display); font-size: 1.25rem; color: var(--dried);
 }
 #code li .aside { color: #5a5048 }
-#code li.broken { text-decoration: line-through; text-decoration-color: var(--blood); text-decoration-thickness: 2px; color: #6b625a }
-#code li.broken small { display: block; font-size: .75rem; color: var(--dried); text-decoration: none }
+/* the red line is drawn across the rule when the sheet scrolls into view; text greys out after it */
+#code li.broken s {
+  text-decoration: none; color: var(--ink);
+  background: linear-gradient(var(--blood), var(--blood)) no-repeat 0 56% / 0% 2px;
+  transition: background-size 1.2s cubic-bezier(.6, 0, .3, 1) .3s, color .4s 1.3s;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+#code ol.seen li.broken s { background-size: 100% 2px; color: #6b625a }
+#code li.broken small { display: block; font-size: .75rem; color: var(--dried); opacity: 0; transition: opacity .6s 1.5s }
+#code ol.seen li.broken small { opacity: 1 }
+@media (prefers-reduced-motion: reduce) {
+  #code li.broken s, #code li.broken small { transition: none }
+}
 #code .ghost { grid-column: 1 / -1; font-size: 1.05rem; color: var(--ash); max-width: 34em; margin: -2vh 0 6vh }
 #code .ghost b { color: var(--bone); font-weight: 400 }
 #code figure { align-self: end; margin: 0 }

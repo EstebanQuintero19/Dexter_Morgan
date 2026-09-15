@@ -12,20 +12,29 @@ export default function Cost() {
   return (
     <section id="cost">
       <div className="frame">
-        <figure>
-          <img src={IMG.sitting} alt="Dexter sitting alone in the dark, hands folded" />
-        </figure>
-        <div>
-          <h2>The cost</h2>
-          <p className="sub">The code kept him out of prison. It did not keep anyone else alive.</p>
-          {LOSSES.map(([name, text, quote]) => (
-            <div className="loss" key={name}>
-              <b>{name}</b>{text}
-              {quote && <q>{quote}</q>}
-            </div>
-          ))}
-          <p className="big">"I destroy everyone I love."</p>
+        <div className="head">
+          <figure>
+            <img src={IMG.sitting} alt="Dexter sitting alone in the dark, hands folded" />
+          </figure>
+          <div>
+            <h2>The cost</h2>
+            <p className="sub">The code kept him out of prison. It did not keep anyone else alive. Lift the plastic.</p>
+            <p className="big">"I destroy everyone I love."</p>
+          </div>
         </div>
+        {/* four bodies under plastic; the sheet clears when you touch it */}
+        <ul className="bags">
+          {LOSSES.map(([name, text, quote]) => (
+            <li key={name} tabIndex={0}>
+              <div className="body">
+                <b>{name}</b>
+                <p>{text}</p>
+                {quote && <q>{quote}</q>}
+              </div>
+              <span className="sheet" aria-hidden="true" />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

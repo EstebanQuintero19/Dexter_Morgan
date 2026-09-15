@@ -7,7 +7,10 @@ function Slot({ k, on, onEnter }) {
   return (
     <li className={(on ? 'on ' : '') + (k.empty ? 'empty' : '')} tabIndex={0}
         onMouseEnter={onEnter} onFocus={onEnter} onClick={onEnter}>
-      <span className="slide"><span className="tag">S{k.s}</span><span className={'drop' + (k.empty ? ' dry' : '')} /></span>
+      <span className="slide">
+        <span className="tag"><span>{k.label}</span><span>{k.date}</span></span>
+        <span className={'drop' + (k.empty ? ' dry' : '')} />
+      </span>
     </li>
   )
 }
@@ -52,6 +55,7 @@ export default function TrophyBox() {
                 <span className="hinge l" /><span className="hinge r" />
                 <span className="plate">EVIDENCE</span>
               </div>
+              <span className="lamp" aria-hidden="true" />
               <ul className="slots">
                 {KILLERS.map((k, i) => (
                   <Slot key={k.s} k={k} on={cur === i} onEnter={() => open && setCur(i)} />

@@ -10,13 +10,36 @@
     linear-gradient(70deg, rgba(255,255,255,0) 60%, rgba(255,255,255,.09) 62%, rgba(255,255,255,0) 65%),
     rgba(7,5,5,.74);
 }
-#room .frame { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center }
+#room .frame { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: start }
 #room .sub { margin: 1.2rem 0 2.4rem; color: var(--ash) }
-#room .step { margin: 0 0 1.6rem; padding-left: 1.4rem; border-left: 2px solid var(--dried) }
-#room .step b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.5rem; color: var(--bone); letter-spacing: .02em }
-#room .evidence { display: grid; gap: 1.4rem; grid-template-columns: 1fr 1fr }
+
+/* the ritual, as index cards taped to the plastic */
+#room .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem 1.2rem }
+#room .note {
+  position: relative; padding: 1.1rem 1rem 1rem; font-size: .92rem; line-height: 1.45;
+  background: linear-gradient(#ebe4d3, #ddd4c0); color: #221a18; box-shadow: 0 8px 18px rgba(0,0,0,.55);
+  transform: rotate(var(--tilt));
+}
+#room .note::before {
+  content: ""; position: absolute; left: 50%; top: -9px; width: 64px; height: 18px;
+  transform: translateX(-50%) rotate(-2deg); background: rgba(235,230,210,.6); box-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+#room .note b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.35rem; color: var(--dried); letter-spacing: .02em; margin-bottom: .2rem }
+#room .note.pinned { grid-column: 1 / -1 }
+#room .wall { display: flex; gap: .8rem; margin-top: .9rem; flex-wrap: wrap }
+#room .wall img {
+  width: 72px; aspect-ratio: 3/4; object-fit: cover; object-position: center 20%;
+  filter: grayscale(1) contrast(1.25) sepia(.2); border: 3px solid #f2ede2; box-shadow: 0 3px 8px rgba(0,0,0,.5);
+  transform: rotate(var(--tilt));
+}
+
+#room .evidence { display: grid; gap: 1.4rem; grid-template-columns: 1fr 1fr; margin-top: 8vh }
 #room .evidence .photo:nth-child(1) { transform: rotate(2deg) translateY(1.5rem) }
 #room .evidence .photo:nth-child(2) { transform: rotate(-2.5deg) }
 #room .evidence img { aspect-ratio: 3/4; filter: grayscale(1) contrast(1.15) }
 #room .evidence figcaption { background: var(--bone); color: var(--ink); display: inline-block; padding: .1rem .5rem; margin-top: .6rem; font-size: .8rem }
-@media (max-width: 820px) { #room .frame { grid-template-columns: 1fr } }
+@media (max-width: 820px) {
+  #room .frame { grid-template-columns: 1fr }
+  #room .steps { grid-template-columns: 1fr }
+  #room .evidence { margin-top: 2rem }
+}

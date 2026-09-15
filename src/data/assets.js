@@ -18,6 +18,7 @@ export const IMG = {
 export const THEME = A + '24 Blood Theme.mp3'
 
 export const SPLAT = A + 'killers/icon_blood.png'
+export const KNIFE = A + 'knife_cursor.png' // 64px, tip at (1,2)
 
 const KILLER_FILES = {
   1: 'Brian_Mouser.jpeg',

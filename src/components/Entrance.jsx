@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { KNIFE } from '../data/assets.js'
 import './Entrance.css'
 
 // The plastic sheet. Drag across the screen to cut it; the two halves peel apart along the cut.
@@ -73,7 +74,8 @@ export default function Entrance({ onOpen }) {
   }, [open])
 
   return (
-    <div id="entrance" ref={ref} className={open ? 'open' : ''} onPointerDown={down} onPointerMove={move} onPointerUp={up}>
+    <div id="entrance" ref={ref} className={open ? 'open' : ''} style={{ cursor: `url("${KNIFE}") 1 2, crosshair` }}
+         onPointerDown={down} onPointerMove={move} onPointerUp={up}>
       <div className="sheet top" style={clip ? { clipPath: clip.top } : undefined} />
       <div className="sheet bottom" style={clip ? { clipPath: clip.bottom } : undefined} />
       {drips.map((p, i) => (

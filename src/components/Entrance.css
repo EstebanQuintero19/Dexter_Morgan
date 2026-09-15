@@ -1,4 +1,4 @@
-#entrance { position: fixed; inset: 0; z-index: 100; cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none }
+#entrance { position: fixed; inset: 0; z-index: 100; touch-action: none; user-select: none; -webkit-user-select: none }
 #entrance .sheet {
   position: absolute; inset: 0;
   background:
