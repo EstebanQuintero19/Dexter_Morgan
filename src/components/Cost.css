@@ -1,0 +1,10 @@
+#cost { padding: 14vh 0 10vh }
+#cost .frame { display: grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items: center }
+#cost figure { margin: 0 }
+#cost figure img { filter: contrast(1.1); width: min(100%, 360px) }
+#cost .sub { margin: 1.2rem 0 2rem; color: var(--ash) }
+#cost .loss { margin: 0 0 1.6rem; padding-left: 1.4rem; border-left: 2px solid var(--dried) }
+#cost .loss b { display: block; font-family: var(--display); font-weight: 400; font-size: 1.6rem; color: var(--bone); letter-spacing: .02em }
+#cost .loss q { quotes: "“" "”"; color: var(--ash); display: block; font-size: .9rem; margin-top: .2rem }
+#cost .big { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1; color: var(--blood); margin: 2rem 0 0; max-width: none }
+@media (max-width: 820px) { #cost .frame { grid-template-columns: 1fr } }

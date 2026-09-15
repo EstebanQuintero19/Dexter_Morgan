@@ -1,0 +1,15 @@
+#hero {
+  min-height: 100svh; display: grid; align-items: end;
+  background-position: center; background-size: cover; background-repeat: no-repeat; isolation: isolate;
+}
+#hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(7,5,5,.15), rgba(7,5,5,.35) 60%, var(--ink) 100%);
+}
+#hero .frame { padding-bottom: 6vh }
+#hero h1 {
+  font-size: clamp(5rem, 22vw, 19rem); color: var(--blood); line-height: .85; letter-spacing: -.01em;
+  text-shadow: 0 0 40px rgba(180,13,22,.35);
+}
+#hero .tag { font-size: clamp(1.05rem, 2vw, 1.4rem); margin-top: 1.2rem; color: var(--bone) }
+#hero .tag small { display: block; color: var(--ash); font-size: .85rem; margin-top: .4rem }

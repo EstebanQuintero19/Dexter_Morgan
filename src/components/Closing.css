@@ -1,0 +1,8 @@
+#close {
+  min-height: 70vh; display: grid; place-items: center; text-align: center;
+  background-position: center; background-size: cover; background-repeat: no-repeat; isolation: isolate;
+}
+#close::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(var(--ink), rgba(7,5,5,.3) 40%, rgba(7,5,5,.6)) }
+#close p { font-family: var(--display); font-size: clamp(2rem, 6vw, 4.5rem); line-height: 1; max-width: none; margin: 0 }
+#close small { display: block; margin-top: 1.5rem; color: var(--ash); font-size: .85rem }
+#close img { width: 150px; margin: 2rem auto 0; opacity: .9 }
