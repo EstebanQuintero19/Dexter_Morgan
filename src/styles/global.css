@@ -14,7 +14,9 @@ html { scroll-behavior: smooth }
 body {
   margin: 0; background: var(--ink); color: var(--bone);
   font-family: var(--type); font-size: 17px; line-height: 1.6; overflow-x: hidden;
+  cursor: var(--knife, auto);
 }
+a, button, [role="button"], [tabindex], label { cursor: var(--knife, pointer) }
 body.sealed { overflow: hidden }
 img { max-width: 100%; display: block }
 a { color: inherit }

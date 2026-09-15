@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { SECTIONS } from './data/killers.js'
-import { SPLAT } from './data/assets.js'
+import { SPLAT, KNIFE_SMALL } from './data/assets.js'
 import BloodDefs from './components/BloodDefs.jsx'
 import Entrance from './components/Entrance.jsx'
 import SoundToggle from './components/SoundToggle.jsx'
@@ -18,8 +18,12 @@ export default function App() {
   const [active, setActive] = useState(null)
   const sound = useRef(null)
 
-  // the splatter used as the blood on every slide
-  useEffect(() => { document.documentElement.style.setProperty('--splat', `url("${SPLAT}")`) }, [])
+  // the splatter used as the blood on every slide; the knife as the cursor everywhere
+  useEffect(() => {
+    const root = document.documentElement.style
+    root.setProperty('--splat', `url("${SPLAT}")`)
+    root.setProperty('--knife', `url("${KNIFE_SMALL}") 1 1, auto`)
+  }, [])
 
   // light up the nav slide for whichever section is in the middle of the viewport
   useEffect(() => {
