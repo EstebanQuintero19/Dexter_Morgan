@@ -30,9 +30,9 @@
 @media (prefers-reduced-motion: reduce) {
   #code li.broken s, #code li.broken small { transition: none }
 }
-#code .ghost { grid-column: 1 / -1; font-size: 1.05rem; color: var(--ash); max-width: 34em; margin: -2vh 0 6vh }
+#code .ghost { grid-column: 1 / -1; font-size: 1.05rem; color: var(--ash); max-width: 34em; margin: 0 0 6vh }
 #code .ghost b { color: var(--bone); font-weight: 400 }
-#code figure { align-self: end; margin: 0 }
+#code figure { align-self: start; margin: 0 }
 #code figure img { width: min(100%, 460px); margin-inline: auto; filter: drop-shadow(0 0 40px rgba(180,13,22,.25)) }
 @media (max-width: 820px) {
   #code .frame { grid-template-columns: 1fr }
