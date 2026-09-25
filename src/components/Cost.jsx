@@ -1,3 +1,4 @@
+import { Title } from './Motion.jsx'
 import { IMG } from '../data/assets.js'
 import './Cost.css'
 
@@ -17,7 +18,7 @@ export default function Cost() {
             <img src={IMG.sitting} alt="Dexter sitting alone in the dark, hands folded" />
           </figure>
           <div>
-            <h2>The cost</h2>
+            <Title>The cost</Title>
             <p className="sub">The code kept him out of prison. It did not keep anyone else alive. Lift the plastic.</p>
             <p className="big">"I destroy everyone I love."</p>
           </div>

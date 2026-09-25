@@ -1,5 +1,6 @@
 import { IMG } from '../data/assets.js'
 import { KILLERS } from '../data/killers.js'
+import { Pinned, Title } from './Motion.jsx'
 import './Room.css'
 
 const STEPS = [
@@ -17,12 +18,13 @@ export default function Room() {
     <section id="room" style={{ backgroundImage: `url("${IMG.window}")` }}>
       <div className="frame">
         <div>
-          <h2>The room</h2>
+          <Title>The room</Title>
           <p className="sub">The place changes. The order never does.</p>
           <div className="steps">
             {STEPS.map(([title, text, extra], i) => (
-              <div className={'note' + (extra ? ' ' + extra : '')} key={title}
-                   style={{ '--tilt': `${(i % 2 ? 1 : -1) * (1 + (i % 3) * .6)}deg`, ...(extra === 'pinned' ? { backgroundImage: `url("${IMG.wall}")` } : {}) }}>
+              <Pinned className={'note' + (extra ? ' ' + extra : '')} key={title} i={i}
+                   tilt={(i % 2 ? 1 : -1) * (1 + (i % 3) * .6)}
+                   style={extra === 'pinned' ? { backgroundImage: `url("${IMG.wall}")` } : undefined}>
                 <b>{title}</b>
                 {text}
                 {extra === 'pinned' && (
@@ -32,23 +34,23 @@ export default function Room() {
                     ))}
                   </div>
                 )}
-              </div>
+              </Pinned>
             ))}
           </div>
         </div>
         <div className="evidence">
-          <figure className="photo wide">
+          <Pinned as="figure" className="photo wide" tilt={-1} i={1}>
             <img src={IMG.table} alt="The table, wrapped in plastic, under two work lights" />
             <figcaption>Exhibit 01 — the table</figcaption>
-          </figure>
-          <figure className="photo">
+          </Pinned>
+          <Pinned as="figure" className="photo" tilt={2} dy="1.5rem" i={2}>
             <img src={IMG.gloves} alt="Dexter in apron and latex gloves, adjusting a sleeve, knife in hand" />
             <figcaption>Exhibit 04 — gloves, apron</figcaption>
-          </figure>
-          <figure className="photo">
+          </Pinned>
+          <Pinned as="figure" className="photo" tilt={-2.5} i={3}>
             <img src={IMG.knife} alt="Dexter in shadow, knife raised, eyes down" />
             <figcaption>Exhibit 07 — instrument</figcaption>
-          </figure>
+          </Pinned>
         </div>
       </div>
     </section>

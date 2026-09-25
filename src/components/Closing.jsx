@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { IMG } from '../data/assets.js'
+import { ScrollWords } from './Motion.jsx'
 import './Closing.css'
 
 export default function Closing() {
@@ -13,7 +14,7 @@ export default function Closing() {
   return (
     <footer id="close" style={{ backgroundImage: `url("${IMG.halftone}")` }}>
       <div className="frame">
-        <p>"I destroy everyone I love.<br />I can't let that happen to Harrison."</p>
+        <ScrollWords text="“I destroy everyone I love. I can't let that happen to Harrison.”" />
         <small>He drove the boat into the hurricane and let them think it worked. Oregon. A beard. A lumber yard. A room with nothing in it. He looks up. He says nothing.</small>
       </div>
       <div className="end" ref={end} aria-hidden="true" />

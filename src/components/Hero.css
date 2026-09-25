@@ -22,10 +22,25 @@
   14% { text-shadow: 0 0 40px rgba(180,13,22,.31) }
   21% { text-shadow: 0 0 43px rgba(190,16,26,.38) }
 }
-#hero .tag { font-size: clamp(1.05rem, 2vw, 1.4rem); margin-top: 1.2rem; color: var(--bone) }
+#hero .tag { font-size: clamp(1.05rem, 2vw, 1.4rem); margin-top: 1.2rem; color: var(--bone); position: relative; z-index: 1; text-shadow: 0 1px 12px rgba(7,5,5,.9) }
 #hero .tag small { display: block; color: var(--ash); font-size: .85rem; margin-top: .4rem }
 
 @media (prefers-reduced-motion: reduce) {
   #hero h1 { animation: none }
   #hero .hall { transform: none }
 }
+
+/* Gotas colgando del título */
+#hero h1 { position: relative; display: inline-block }
+#hero .drips { position: absolute; left: 0; right: 0; top: .78em; height: 0; pointer-events: none }
+#hero .drips i {
+  position: absolute; top: -.06em; width: .045em; height: var(--len); border-radius: 0 0 .03em .03em;
+  background: linear-gradient(var(--blood), #8f0a12); transform-origin: top; transform: scaleY(0);
+  animation: drip 5s cubic-bezier(.6, 0, .4, 1) forwards;
+}
+#hero .drips i::after {
+  content: ""; position: absolute; left: 50%; bottom: -.03em; width: .075em; height: .09em; translate: -50% 0;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; background: radial-gradient(circle at 35% 30%, #ff6b6b, var(--blood) 40%, #6d070d);
+}
+@keyframes drip { to { transform: scaleY(1) } }
+@media (prefers-reduced-motion: reduce) { #hero .drips i { animation: none; transform: none } }

@@ -1,3 +1,4 @@
+import { Title } from './Motion.jsx'
 import { useState } from 'react'
 import { IMG } from '../data/assets.js'
 import { KILLERS } from '../data/killers.js'
@@ -43,7 +44,7 @@ export default function TrophyBox() {
   return (
     <section id="box" style={{ backgroundImage: `url("${IMG.slideBg}")` }}>
       <div className="frame">
-        <h2>The box</h2>
+        <Title>The box</Title>
         <p className="sub">Behind the air conditioner. One drop for each. Open it, and hover a slide.</p>
         <div className="boxwrap">
           <div className="scene">

@@ -13,6 +13,7 @@ import Room from './components/Room.jsx'
 import TrophyBox from './components/TrophyBox.jsx'
 import Cost from './components/Cost.jsx'
 import Closing from './components/Closing.jsx'
+import { Splatter } from './components/Motion.jsx'
 
 export default function App() {
   const [active, setActive] = useState(null)
@@ -41,6 +42,7 @@ export default function App() {
   return (
     <>
       <BloodDefs />
+      <Splatter src={SPLAT} />
       <Entrance onOpen={opened} />
       <SoundToggle ref={sound} />
       <Nav active={active} />

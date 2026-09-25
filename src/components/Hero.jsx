@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { IMG } from '../data/assets.js'
+import { Drips } from './Motion.jsx'
 import './Hero.css'
 
 export default function Hero() {
@@ -23,7 +24,7 @@ export default function Hero() {
     <header id="hero">
       <div className="hall" ref={hall} style={{ backgroundImage: `url("${IMG.hallway}")` }} aria-hidden="true" />
       <div className="frame">
-        <h1>DEXTER</h1>
+        <h1>DEXTER<Drips /></h1>
         <p className="tag">
           Tonight's the night. And it's going to happen again and again. It has to happen.
           <small>Miami. A hallway. Someone waiting at the end of it.</small>

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { IMG } from '../data/assets.js'
+import { motion } from 'framer-motion'
+import { Rule, Title } from './Motion.jsx'
 import './Code.css'
 
 export default function Code() {
@@ -15,19 +17,19 @@ export default function Code() {
   return (
     <section id="code">
       <div className="frame">
-        <h2>Harry's code</h2>
-        <ol ref={list} className={seen ? 'seen' : ''}>
-          <li>Don't get caught. Everything else depends on this.</li>
-          <li>Be sure. Never an innocent. Proof, not a feeling.</li>
-          <li>Only those who have killed and will kill again.</li>
-          <li>Leave nothing. Clean the room. <small className="aside">(He kept the slides anyway.)</small></li>
-          <li>Blend in. Smile. Be the guy nobody looks at twice.</li>
-          <li className="broken">
+        <Title>Harry's code</Title>
+        <motion.ol ref={list} className={seen ? 'seen' : ''} initial="off" whileInView="on" viewport={{ once: true, margin: '-12% 0px' }} transition={{ staggerChildren: 0.12 }}>
+          <Rule>Don't get caught. Everything else depends on this.</Rule>
+          <Rule>Be sure. Never an innocent. Proof, not a feeling.</Rule>
+          <Rule>Only those who have killed and will kill again.</Rule>
+          <Rule>Leave nothing. Clean the room. <small className="aside">(He kept the slides anyway.)</small></Rule>
+          <Rule>Blend in. Smile. Be the guy nobody looks at twice.</Rule>
+          <Rule className="broken">
             <s>Don't get attached. No partner. No friends. No family.</s>
             <small>Broken: Rita, Harrison, Lumen, Hannah, Deb.</small>
-          </li>
-          <li>Control the need. Never on impulse. Always with a plan.</li>
-        </ol>
+          </Rule>
+          <Rule>Control the need. Never on impulse. Always with a plan.</Rule>
+        </motion.ol>
         <figure>
           <img src={IMG.suit} alt="Dexter in a suit, looking upward, high-contrast grain" />
         </figure>

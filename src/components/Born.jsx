@@ -1,3 +1,4 @@
+import { Title } from './Motion.jsx'
 import { IMG } from '../data/assets.js'
 import './Born.css'
 
@@ -6,7 +7,7 @@ export default function Born() {
     <section id="born">
       <div className="frame">
         <div>
-          <h2>Born in blood</h2>
+          <Title>Born in blood</Title>
           <p className="lead">
             A shipping container at the port of Miami. A chainsaw. His mother, in pieces. A three-year-old sitting in
             two inches of her blood for two days before a young cop opened the door and carried him out.
